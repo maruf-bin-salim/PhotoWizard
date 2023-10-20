@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Effects - PhotoWizard</title>
+    <link rel="stylesheet" href="./CSS/processing-core.css">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+    <script type="text/javascript" src="./JS/library/caman.min.js"></script>
+    <script type="text/javascript" src="./JS/caman.processing.js"></script>
+
+    <script type="text/javascript">
+        Caman.DEBUG = true
+    </script>
+
+
+    <script type="text/javascript" src="./JS/processing-core.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+    <!-- navigation bar -->
+    <div class="navigation-bar">
+        <a href="./index.html" class="logo-link">
+            <img src="./assets/logo.png" alt="logo" class="logo">
+        </a>
+        <div class="navigation-bar-links">
+            <a href="./index.html" class="navigation-bar-link">Home</a>
+            <a href="./image-enhancement.html" class="navigation-bar-link">Enhancement</a>
+            <a href="./color-adjustment.html" class="navigation-bar-link">Adjustment</a>
+            <a href="./visual-effects.html" class="active-link navigation-bar-link">Effects</a>
+            <a href="./image-processing.html" class="navigation-bar-link">Processing</a>
+            <a href="./preset-filters.html" class="navigation-bar-link">Filters</a>
+        </div>
+    </div>
+    <!-- end of navigation bar -->
+
+    <!-- main content -->
+    <div class="main-content">
+
+        <div class="title">
+            <h1>Visual Effects</h1>
+        </div>
+
+        <!-- controls -->
+        <div class="controls">
+
+
+            <div class="buttons">
+                <label class="custom-file-input">
+                    <input type="file" id="fileInput" accept="image/*">
+                    Choose File
+                </label>
+                <button id="clearButton">clear</button>
+                <button id="saveButton">save</button>
+            </div>
+
+
+            <div id="Filters">
+
+                <div class="Filter">
+                    <div class="FilterName">
+                        <p>sepia</p>
+                    </div>
+
+                    <div class="FilterSetting">
+                        <input type="range" min="0" max="100" step="1" value="0" data-filter="sepia">
+                        <span class="FilterValue">0</span>
+                    </div>
+                </div>
+
+                <div class="Filter">
+                    <div class="FilterName">
+                        <p>gamma</p>
+                    </div>
+
+                    <div class="FilterSetting">
+                        <input type="range" min="0" max="10" step="0.1" value="0" data-filter="gamma">
+                        <span class="FilterValue">0</span>
+                    </div>
+                </div>
+
+                <div class="Filter">
+                    <div class="FilterName">
+                        <p>noise</p>
+                    </div>
+
+                    <div class="FilterSetting">
+                        <input type="range" min="0" max="100" step="1" value="0" data-filter="noise">
+                        <span class="FilterValue">0</span>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+        </div>
+        <!-- end of controls -->
+
+        <!-- image container -->
+        <div class="imageContainer" id="imageContainer">
+            <div class="image">
+                <h3>
+                    Original Image
+                </h3>
+                <img id="imageElement" src="" alt="">
+            </div>
+            <div class="image">
+                <h3>
+                    Processed Image
+                </h3>
+                <img id="processedImageElement" src="" data-caman-hidpi="" alt="">
+            </div>
+        </div>
+        <!-- end of image container -->
+
+    </div>
+    <!-- end of main content -->
+
+    <!-- load the javascript -->
+</body>
+
+</html>

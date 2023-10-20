@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    height: max-content;
+
+    background-color: #9abed3;
+    border-bottom: 2px solid #3f3fc5;
+}
+
+.logo-link {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    background-color: transparent;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation-bar-links {
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+    height: max-content;
+    gap: 20px;
+}
+
+.navigation-bar-link {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: x-large;
+
+    transition: all 0.1s ease-in-out;
+}
+
+.navigation-bar-link:hover {
+    font-size: xx-large;
+
+    color: #3f3fc5;
+}
+
+.active-link {
+    text-decoration: underline;
+    font-size: xx-large;
+
+    color: #3f3fc5;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    background-color: #dbdbdb;
+    overflow-y: scroll;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    color: #000;
+    padding: 5px;
+}
+
+.imageContainer {
+    flex: 1;
+    width: 100%;
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+
+.image {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+
+}
+
+.image>img {
+    display: block;
+}
+
+.image>canvas {
+    display: block;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #afb1b3;
+    width: max-content;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #3f3fc5;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+.custom-file-input {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+    background-color: #9abed3;
+    font-size: large;
+    border: 1px solid #3f3fc5;
+
+}
+
+.custom-file-input input {
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.buttons>button {
+    background-color: #9abed3;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+    font-size: large;
+    border: 1px solid #3f3fc5;
+
+}
+
+#Filters {
+    display: flex;
+    width: 90vw;
+    gap: 30px;
+}
+
+.Filter {
+    width: 100%;
+    flex: 1;
+    background-color: #9abed3;
+    border: 1px solid #3f3fc5;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.FilterName,
+.FilterSetting {
+    width: 100%;
+    /* Make both child elements expand to 100% width */
+    display: flex;
+    /* Align elements horizontally */
+    align-items: center;
+    /* Vertically center align elements */
+}
+
+.FilterName p {
+    margin: 0;
+    /* Remove default margin for the <p> element */
+}
+
+.FilterSetting input {
+    width: 100%;
+
+}
+
+.FilterValue {
+    margin-left: 10px;
+    /* Add space between the input and the value */
+}
+
+
+
+
+
+/* media query for mobile devices */
+@media only screen and (max-width: 768px) {
+
+    .navigation-bar {
+        padding: 30px;
+        height: max-content;
+    }
+
+    .navigation-bar-links {
+        margin-left: 10px;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .navigation-bar-link {
+        font-size: large;
+    }
+
+    .navigation-bar-link:hover {
+        font-size: x-large;
+    }
+
+    .active-link {
+        font-size: x-large;
+    }
+
+    .imageContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    .image>h3 {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .controls {
+        width: 90%;
+        padding: 20px;
+    }
+
+    #Filters {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+  
+
+
+}
