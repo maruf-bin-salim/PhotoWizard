@@ -45,6 +45,7 @@ Caman.Filter.register("bright", function (grey) {
       return;
     }
     caman = Caman('#processedImageElement');
+    console.log("Caman initialized.");
     var filterInputs = document.querySelectorAll('.FilterSetting input');
     filterInputs.forEach(function (input) {
       var filter = input.getAttribute('data-filter');
