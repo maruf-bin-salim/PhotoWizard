@@ -193,7 +193,10 @@ body {
     border-radius: 15px;
     border: 1px solid #dbdbdb80;
 }
+#PresetFilters .active {
+    border: 1px solid white;
 
+}
 .FilterName,
 .FilterSetting {
     width: 100%;

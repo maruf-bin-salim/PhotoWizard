@@ -59,6 +59,12 @@ function handleClearFilterButtonClick(e) {
     let imageSource = imageElement.src;
     updateImageSource("");
     updateImageSource(imageSource);
+
+
+    var presetFilters = document.querySelectorAll("#PresetFilters a");
+    for (var i = 0; i < presetFilters.length; i++) {
+        presetFilters[i].classList.remove('active');
+    }
 }
 
 

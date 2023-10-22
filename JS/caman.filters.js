@@ -32,11 +32,11 @@ Caman.Filter.register("blackAndWhite", function (grey) {
 
       var presetFilters = document.querySelectorAll("#PresetFilters a");
       for (var i = 0; i < presetFilters.length; i++) {
-        presetFilters[i].classList.remove('Active');
+        presetFilters[i].classList.remove('active');
       }
       var $filter = document.querySelector("a[data-preset='" + preset + "']");
       var name = $filter.innerHTML;
-      $filter.classList.add('Active');
+      $filter.classList.add('active');
       $filter.innerHTML = 'Rendering...';
       presetBusy = true;
       presetCaman.revert(false);
