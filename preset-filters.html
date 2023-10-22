@@ -6,6 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filters - PhotoWizard</title>
     <link rel="stylesheet" href="./CSS/preset-filters.css">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+    <script type="text/javascript" src="./JS/library/caman.min.js"></script>
+    <script type="text/javascript" src="./JS/caman.filters.js"></script>
+
+    <script type="text/javascript">
+        Caman.DEBUG = true
+    </script>
+
+
+    <script type="text/javascript" src="./JS/processing-filters.js"></script>
+
+
 </head>
 
 <body>
@@ -28,6 +41,93 @@
 
     <!-- main content -->
     <div class="main-content">
+
+
+        <div class="title">
+            <h1>Preset Filters</h1>
+        </div>
+
+
+        <!-- controls -->
+        <div class="controls">
+
+
+            <div class="buttons">
+                <label class="custom-file-input">
+                    <input type="file" id="fileInput" accept="image/*">
+                    Choose File
+                </label>
+                <button id="clearButton">Remove Image</button>
+                <button id="clearFilterButton">Clear Filter</button>
+                <button id="saveButton">Save</button>
+            </div>
+
+
+            <div id="PresetFilters">
+
+                <a data-preset="vintage">Vintage</a>
+
+                <a data-preset="lomo">Lomo</a>
+
+                <a data-preset="clarity">Clarity</a>
+
+                <a data-preset="sinCity">Sin City</a>
+
+                <a data-preset="sunrise">Sunrise</a>
+
+                <a data-preset="crossProcess">Cross Process</a>
+
+                <a data-preset="orangePeel">Orange Peel</a>
+
+                <a data-preset="love">Love</a>
+
+                <a data-preset="grungy">Grungy</a>
+
+                <a data-preset="jarques">Jarques</a>
+
+                <a data-preset="pinhole">Pinhole</a>
+
+                <a data-preset="oldBoot">Old Boot</a>
+
+                <a data-preset="glowingSun">Glowing Sun</a>
+
+                <a data-preset="hazyDays">Hazy Days</a>
+
+                <a data-preset="herMajesty">Her Majesty</a>
+
+                <a data-preset="nostalgia">Nostalgia</a>
+
+                <a data-preset="hemingway">Hemingway</a>
+
+                <a data-preset="concentrate">Concentrate</a>
+
+                <a data-preset="blackAndWhite">Black and White</a>
+
+                <a data-preset="bright">Bright</a>
+
+            </div>
+
+        </div>
+        <!-- end of controls -->
+
+
+        <!-- image container -->
+        <div class="imageContainer" id="imageContainer">
+            <div class="image">
+                <h3>
+                    Original Image
+                </h3>
+                <img id="imageElement" src="" alt="">
+            </div>
+            <div class="image">
+                <h3>
+                    Processed Image
+                </h3>
+                <img id="processedImageElement" src="" data-caman-hidpi="" alt="">
+            </div>
+        </div>
+        <!-- end of image container -->
+
 
     </div>
     <!-- end of main content -->
