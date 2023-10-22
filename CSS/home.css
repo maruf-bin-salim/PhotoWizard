@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Sometype Mono', monospace;
 }
 
 html,
@@ -18,8 +21,8 @@ body {
     padding: 30px;
     height: max-content;
 
-    background-color: #dbdbdb;
-    border-bottom: 2px solid #3f3fc5;
+    background-color: #1E1F22;
+    border-bottom: 1px solid #dbdbdb80;
 }
 
 .logo-link {
@@ -51,34 +54,178 @@ body {
     font-weight: 500;
     font-size: x-large;
 
+    color: #dbdbdb80;
     transition: all 0.1s ease-in-out;
 }
 
 .navigation-bar-link:hover {
-    text-decoration: underline;
     font-size: xx-large;
 
-    color: #3f3fc5;
+    color: #dbdbdb;
 }
 
 .active-link {
     text-decoration: underline;
     font-size: xx-large;
 
-    color: #3f3fc5;
+    color: #dbdbdb;
 }
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    background-color: #2E3035;
+    overflow-y: scroll;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #dbdbdb;
+    font-weight: 100;
+    padding-top: 5px;
+
+}
+
+.imageContainer {
+    flex: 1;
+    width: 100%;
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+
+.image {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+
+}
+
+
+.image>canvas {
+    display: block;
+}
+
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1E1F22;
+    border: 1px solid #dbdbdb80;
+    width: max-content;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+.custom-file-input {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+    background-color: #2E3035;
+    color: #dbdbdb;
+    font-size: large;
+    border: 1px solid #dbdbdb80;
+
+}
+
+.custom-file-input input {
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.buttons>button {
+    background-color: #2E3035;
+    color: #dbdbdb;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+    font-size: large;
+    border: 1px solid #dbdbdb80;
+}
+
+#Filters {
+    display: flex;
+    width: 90vw;
+    gap: 30px;
+}
+
+.Filter {
+    width: 100%;
+    flex: 1;
+    background-color: #2E3035;
+    color: #dbdbdb;
+    border: 1px solid #dbdbdb80;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.FilterName,
+.FilterSetting {
+    width: 100%;
+    /* Make both child elements expand to 100% width */
+    display: flex;
+    /* Align elements horizontally */
+    align-items: center;
+    /* Vertically center align elements */
+}
+
+.FilterName p {
+    /* captitalize first letter */
+    text-transform: capitalize;
+
+}
+
+.FilterSetting input {
+    width: 100%;
+
+}
+
+.FilterValue {
+    margin-left: 10px;
+    /* Add space between the input and the value */
+}
+
+
+
 
 
 /* media query for mobile devices */
 @media only screen and (max-width: 768px) {
 
     .navigation-bar {
-        padding: 30px;
+        padding: 20px;
         height: max-content;
     }
 
     .navigation-bar-links {
-        margin-left: 10px;
+        margin-left: 20px;
         gap: 10px;
         flex-wrap: wrap;
     }
@@ -94,5 +241,54 @@ body {
     .active-link {
         font-size: x-large;
     }
-    
+
+    .imageContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image {
+        width: 100%;
+        margin-bottom: 10px;
+
+        overflow-y: scroll;
+    }
+
+
+    .image>canvas {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+    }
+
+
+    .image>h3 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: #dbdbdb;
+    }
+
+    .title>h1 {
+        padding: 10px;
+        font-size: large;
+    }
+
+    .controls {
+        width: 90%;
+        padding: 10px;
+    }
+
+    #Filters {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+
+
+
+
+
 }

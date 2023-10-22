@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Sometype Mono', monospace;
 }
 
 html,
@@ -103,14 +106,11 @@ body {
 
 }
 
-.image>img {
-}
 
 .image>canvas {
     display: block;
 }
 
-.processedImageElement {}
 
 .controls {
     display: flex;
@@ -256,8 +256,8 @@ body {
     }
 
 
-    .image > canvas {
-        display:inline-block;
+    .image>canvas {
+        display: inline-block;
         width: 100px;
         height: 100px;
     }
